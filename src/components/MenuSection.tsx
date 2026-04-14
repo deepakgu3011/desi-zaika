@@ -11,6 +11,7 @@ const menuItems = [
     price: "99",
     color: "from-orange-400 to-red-500",
     zomatoUrl: ZOMATO_URL,
+    image: "litti-chokha.jpg",
   },
   {
     id: "m2",
@@ -19,22 +20,25 @@ const menuItems = [
     price: "79",
     color: "from-yellow-400 to-orange-500",
     zomatoUrl: ZOMATO_URL,
+    image: "OIP.jpg",
   },
   {
     id: "m3",
-    name: "Butter Litti Combo",
+    name: "Macroni",
     description: "6 littis with chokha, salad, aur makhan",
     price: "149",
     color: "from-amber-500 to-red-600",
     zomatoUrl: ZOMATO_URL,
+    image: "macroni.webp",
   },
   {
     id: "m4",
-    name: "Sattu Paratha",
-    description: "Crispy paratha stuffed with spiced sattu masala",
+    name: "Plain Paratha",
+    description: "Crispy paratha stuffed with spiced Plain masala",
     price: "89",
     color: "from-red-400 to-rose-600",
     zomatoUrl: ZOMATO_URL,
+    image: "pratha.webp",
   },
 ];
 
@@ -85,16 +89,13 @@ export function MenuSection() {
               variants={itemVariants}
               className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border group"
             >
-              {/* Image Placeholder */}
-              <div
-                className={`w-full h-48 bg-gradient-to-br ${item.color} relative flex items-center justify-center overflow-hidden`}
-              >
-                {/* Decorative circle */}
-                <div className="absolute w-32 h-32 rounded-full bg-white/20 blur-xl mix-blend-overlay" />
-                <span className="font-serif text-3xl font-bold text-white drop-shadow-md">
-                  {item.name.charAt(0)}
-                </span>
-                
+              {/* Image */}
+              <div className="relative">
+                <img
+                  src={`/products/${item.image}`}
+                  alt={item.name}
+                  className="w-full h-48 object-cover rounded-t-2xl"
+                />
                 {/* Price Badge */}
                 <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground font-bold px-3 py-1 rounded-full shadow-lg">
                   ₹{item.price}
