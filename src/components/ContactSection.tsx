@@ -30,19 +30,7 @@ export function ContactSection() {
           className="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10"
           style={{ minHeight: 640 }}
         >
-          <iframe
-            src={`${GOOGLE_FORM_URL}?embedded=true`}
-            width="100%"
-            height="640"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            title="Contact Us Form"
-            className="w-full bg-white"
-            data-testid="iframe-contact-form"
-          >
-            Loading form…
-          </iframe>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6824.78907572489!2d75.76763352721557!3d31.209797008607907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391af4cfbf69cf17%3A0x9cb5e9788af83f32!2sJCT%20Phagwara!5e0!3m2!1sen!2sin!4v1776166392792!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </motion.div>
 
         <p className="text-center text-[#fcf9f2]/40 text-sm mt-6">
